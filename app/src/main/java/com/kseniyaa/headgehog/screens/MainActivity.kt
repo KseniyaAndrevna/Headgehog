@@ -23,15 +23,16 @@ import kotlinx.android.synthetic.main.fragment_items.*
 class MainActivity : AppCompatActivity() {
     private var viewPager: ViewPager? = null
 
+    //declaring data arrays
     val navIcons = intArrayOf(R.drawable.ic_crown, R.drawable.ic_info)
     private val navLabels = intArrayOf(R.string.jokes, R.string.info)
     val navIconsActive = intArrayOf(R.drawable.ic_crown_active, R.drawable.ic_info_active)
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //add adapter for viewPager
         setSupportActionBar(toolbar)
 
         val adapter = MainPagesAdapter(supportFragmentManager)
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         tab_layout.setupWithViewPager(viewPager)
 
+        //settings for custom tabLayout
         for (i in 0 until tab_layout.tabCount) {
             val tab = LayoutInflater.from(this).inflate(R.layout.nav_tab, null) as LinearLayout
 
@@ -107,11 +109,13 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    //processing a configuration change
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        count_et.onEditorAction(EditorInfo.IME_ACTION_DONE)
+        hideKeyboard(this@MainActivity)
     }
 
+    //hide keyboard for info tab
     fun hideKeyboard(activity: Activity) {
         val view = activity.findViewById<View>(android.R.id.content)
         if (view != null) {

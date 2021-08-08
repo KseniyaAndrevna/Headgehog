@@ -17,6 +17,10 @@ class InfoFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_info, container, false)
 
+        //possibility of scaling
+        rootView.info_wv.settings.builtInZoomControls = true
+
+        //loading the WebView state if it was saved
         if (savedInstanceState != null) {
             rootView.info_wv.restoreState(savedInstanceState)
         } else {
@@ -29,14 +33,23 @@ class InfoFragment : Fragment() {
                 return false
             }
         }
+
+        //back button
+        rootView.fab_back.setOnClickListener {
+            if (info_wv.canGoBack()) {
+                info_wv.goBack()
+            }
+        }
         return rootView
     }
 
+    //save webView state
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         info_wv.saveState(outState)
     }
 
+    //TAG for debug
     val Any.TAG: String
         get() {
             val tag = javaClass.simpleName

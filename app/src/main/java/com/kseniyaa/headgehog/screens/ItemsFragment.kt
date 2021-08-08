@@ -6,6 +6,7 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,7 @@ class ItemsFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        //load count of jokes
         loadJokesCount()
         return inflater.inflate(R.layout.fragment_items, container, false)
     }
@@ -59,6 +61,7 @@ class ItemsFragment : Fragment() {
             count_et.setText("")
         }
 
+        //TextChangedListener for block reload btn if count is empty
         count_et.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
@@ -85,7 +88,7 @@ class ItemsFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<Result>, t: Throwable) {
-                println(t)
+                Log.e(TAG,t.toString())
             }
         })
     }
