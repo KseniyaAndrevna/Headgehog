@@ -25,7 +25,7 @@
 
     <Button
         android:id="@+id/reload_btn"
-        android:background="@color/colorPrimary"
+        android:background="@color/color_btn"
         android:textColor="@color/white"
         android:layout_marginBottom="@dimen/items_btn_margin_b"
         android:enabled="false"
