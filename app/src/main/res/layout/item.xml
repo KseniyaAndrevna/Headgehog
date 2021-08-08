@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultActivityStyleMV"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/item_padding_t_b"
+    android:paddingEnd="@dimen/item_padding_st_en"
+    android:paddingStart="@dimen/item_padding_st_en"
+    android:paddingTop="@dimen/item_padding_t_b">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TextItemStyle"
+        android:layout_weight="1"
+        tools:text="The last digit of pi is Chuck Norris."
+        />
+
+</LinearLayout>

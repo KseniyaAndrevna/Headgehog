@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hedgehog</string>
+
+    <string name="jokes">Jokes</string>
+    <string name="info">Web</string>
+
+    <!-- Items Fragment -->
+    <string name="items_et_hint">Count</string>
+    <string name="items_btn">reload</string>
+
+</resources>

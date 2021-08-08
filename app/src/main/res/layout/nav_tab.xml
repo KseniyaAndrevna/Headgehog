@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tab"
+    style="@style/DefaultActivityStyle"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+<!--    it is not included in the styles, because it is one for the entire application-->
+
+    <ImageView
+        android:id="@+id/nav_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nav_iv_height"
+        android:layout_marginTop="@dimen/nav_iv_margin_t"
+        android:layout_marginBottom="@dimen/nav_iv_margin_b"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_crown" />
+
+    <TextView
+        android:id="@+id/nav_label"
+        style="@style/DefaultElementStyle"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nav_tv_text"
+        tools:text="@string/jokes" />
+
+</LinearLayout>

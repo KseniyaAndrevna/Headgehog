@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="middle_text_size">14sp</dimen>
+
+    <!-- Main Activity -->
+    <dimen name="main_rv_height">0dp</dimen>
+    <dimen name="main_vp_height">100dp</dimen>
+    <dimen name="main_tab_height">50dp</dimen>
+    <dimen name="main_tab_text">@dimen/middle_text_size</dimen>
+
+    <!-- Items Fragment -->
+    <dimen name="items_et_h">10dp</dimen>
+    <dimen name="items_et_padding_l">8dp</dimen>
+    <dimen name="items_et_text">25sp</dimen>
+    <dimen name="items_btn_width">120dp</dimen>
+    <dimen name="items_btn_height">0dp</dimen>
+    <dimen name="items_btn_text">15sp</dimen>
+    <dimen name="items_btn_margin_b">15dp</dimen>
+    <dimen name="items_et_margin_b">10dp</dimen>
+
+    <!-- Nav Tab -->
+    <dimen name="nav_iv_height">30dp</dimen>
+    <dimen name="nav_iv_margin_t">5dp</dimen>
+    <dimen name="nav_iv_margin_b">3dp</dimen>
+    <dimen name="nav_tv_text">20sp</dimen>
+
+    <!-- Item -->
+    <dimen name="item_padding_st_en">24dp</dimen>
+    <dimen name="item_padding_t_b">28dp</dimen>
+    <dimen name="item_text_size">20dp</dimen>
+
+</resources>

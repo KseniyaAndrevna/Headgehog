@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/DefaultActivityStyle"
+    android:orientation="vertical"
+    tools:context=".screens.ItemsFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        style="@style/RecyclerViewStyle"
+        android:layout_weight="15"
+        tools:listitem="@layout/item" />
+
+    <EditText
+        android:id="@+id/count_et"
+        style="@style/EditTextStyle"
+        android:layout_gravity="center"
+        android:layout_weight="4"
+        android:ems="8"
+        android:hint="@string/items_et_hint"
+        android:importantForAutofill="no"
+        android:inputType="number">
+<!--        <requestFocus />-->
+    </EditText>
+
+    <Button
+        android:id="@+id/reload_btn"
+        style="@style/ButtonStyle"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:text="@string/items_btn" />
+
+</LinearLayout>
