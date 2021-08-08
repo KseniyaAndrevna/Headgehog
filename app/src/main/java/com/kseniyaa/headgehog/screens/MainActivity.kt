@@ -18,6 +18,7 @@ import android.widget.TextView
 import com.kseniyaa.headgehog.MainPagesAdapter
 import com.kseniyaa.headgehog.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_info.*
 import kotlinx.android.synthetic.main.fragment_items.*
 
 class MainActivity : AppCompatActivity() {
@@ -122,6 +123,11 @@ class MainActivity : AppCompatActivity() {
             val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
+    }
+
+    //back button
+    override fun onBackPressed() {
+        if (toolbar.title == "API info" && info_wv.canGoBack()) info_wv.goBack()
     }
 
     val Any.TAG: String

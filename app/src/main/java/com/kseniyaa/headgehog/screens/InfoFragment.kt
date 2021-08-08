@@ -12,7 +12,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.kseniyaa.headgehog.R
 
-class InfoFragment : Fragment() {
+class InfoFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_info, container, false)
@@ -31,13 +31,6 @@ class InfoFragment : Fragment() {
             override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
                 view.loadUrl(request.url.toString())
                 return false
-            }
-        }
-
-        //back button
-        rootView.fab_back.setOnClickListener {
-            if (info_wv.canGoBack()) {
-                info_wv.goBack()
             }
         }
         return rootView

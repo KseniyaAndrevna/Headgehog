@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/info_fragment"
     style="@style/DefaultActivityStyle"
     tools:context=".screens.InfoFragment">
 
@@ -12,12 +13,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_back"
-        style="@style/FloatingActionButtonStyle"
-        android:src="@drawable/back_btn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-    </android.support.design.widget.FloatingActionButton>
 </android.support.constraint.ConstraintLayout>
